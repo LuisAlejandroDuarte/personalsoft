@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "type": "appInsights",
+      "connectionId": "",
+      "suggestion": "true",
+      "ignored": "true"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/pymes/databases/BDMYPIMES",
+      "type": "mssql.azure",
+      "connectionId": "defaultConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

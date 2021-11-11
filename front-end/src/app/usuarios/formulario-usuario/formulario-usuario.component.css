@@ -1,0 +1,12 @@
+.mat-card {
+    margin :0 auto;
+    width: 70%;
+}
+
+.mat-card-actions {
+    height:3rem;
+}
+
+.mat-form-field {
+    width: 50%;
+}

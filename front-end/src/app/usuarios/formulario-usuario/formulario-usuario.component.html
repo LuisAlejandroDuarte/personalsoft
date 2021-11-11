@@ -1,0 +1,56 @@
+<form [formGroup]="form" (submit)="guardarCambios()">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{titulo}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="10px">
+                <mat-form-field appearance="outline" style="width:15%">
+                    <mat-label>Usuario *</mat-label>
+                    <input formControlName="user"  matInput placeholder="Escriba el usuario" />
+                    <mat-error>El campo usuario es requerido</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width:35%">
+                    <mat-label>Nombres*</mat-label>
+                    <input formControlName="nombre" matInput placeholder="Escriba el nombre del usuario"/>
+                    <mat-error>El campo nombre es requerido</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width:35%">
+                    <mat-label>Apellidos*</mat-label>
+                    <input formControlName="apellido" matInput placeholder="Escriba el apellido del usuario"/>
+                    <mat-error>El campo apellido es requerido</mat-error>
+                </mat-form-field>
+            </div>
+                <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="10px">
+
+                  <mat-form-field appearance="outline" style="width:20%">
+                    <mat-label>Email*</mat-label>
+                    <input formControlName="email" matInput pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Escriba el email del usuario"/>
+                    <mat-error>El email es requerido</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Activo</mat-label>
+                  <select matNativeControl formControlName="activo" required>
+                    <option [value]="1">Activo</option>
+                    <option [value]="0">Inactivo</option>
+                  </select>
+                </mat-form-field>
+                </div>
+
+
+
+          </mat-card-content>
+          <mat-card-actions>
+            <div style="float:right">
+                <button mat-flat-button color="primary" [disabled]="form.invalid">
+                    Guardar cambios
+                </button>
+                <a mat-stroked-button routerLink="/usuarios">
+                    Cancelar
+                </a>
+            </div>
+          </mat-card-actions>
+    </mat-card>
+
+</form>
+
